@@ -18,6 +18,7 @@ vim .env
 //.env
 POSTGRES_USER=new_postgres_username
 POSTGRES_PASSWORD=new_secure_postgres_password
+POSTGRES_ADMIN_PASSWORD=new_secure_supersuer_postgres_password
 ```
 
 Seed postgres database
@@ -30,7 +31,7 @@ Start everything
 docker-compose up -d
 ```
 
-Guacamole is now listening on port 8080
+Guacamole is now listening on port 8080, such as `http://[HOST IP]:8080/guacamole`.
 
 default username: guacadmin
 
