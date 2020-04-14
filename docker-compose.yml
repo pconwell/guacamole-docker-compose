@@ -15,7 +15,7 @@ services:
       - dbdata:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-guacdb}
-      POSTGRES_PASSWORD: 
+      POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD:-guacdb}
     depends_on:
       - init-guacamole-db
 
@@ -33,7 +33,7 @@ services:
       POSTGRES_HOSTNAME: postgres
       POSTGRES_DATABASE: ${POSTGRES_USER:-guacdb}
       POSTGRES_USER: ${POSTGRES_USER:-guacdb}
-      POSTGRES_PASSWORD:
+      POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD:-guacdb}
     depends_on:
       - postgres
       - guacd
